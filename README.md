@@ -6,7 +6,8 @@ This is a *very* simple script to check remote upstart jobs via ssh.
 ## Installation
 In your Nagios plugins diretory run
 ``` bash
-$ git clone <git link>
+$ git https://github.com/jhaubrich/Nagios-Plugin-Upstart.git
+$ ln -s Nagios-Plugin-Upstart/check_upstart.py check_upstart
 ```
 
 ## Usage

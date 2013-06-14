@@ -31,7 +31,7 @@ def main():
     options, arguments = p.parse_args()
 
     try:
-        status = check_output("ssh {user}@{host} -C 'status {job}'".format(**options.__dict__), shell=True)
+        status = check_output("ssh -o StrictHostKeyChecking=no {user}@{host} -C 'status {job}'".format(**options.__dict__), shell=True)
     except:
         # ssh command failed, job unknown, bad host, etc.
         print(options.job, "state UNKNOWN")
